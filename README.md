@@ -63,9 +63,9 @@ The values for the colors can be any valid color string in "HEX", "RGB" or by co
 
 This is with the default Lovelace frontend theme set:
 
-![Default](button row default example.gif)
+![Default](button-row-default-example.gif)
 
 
 This is with the "Slate" frontend theme set:
 
-![Slate](button row example.gif)
+![Slate](button-row-example.gif)
