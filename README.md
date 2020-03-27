@@ -70,6 +70,6 @@ This is with the "Slate" frontend theme set:
 
 ![Slate](button-row-example.gif)
 
-this is how this plugin looks with the Fan control & Light Brightness Rows:
+This is how this plugin looks with the Fan control & Light Brightness Rows:
 
 ![Slate-Compare](button-row-example-compare.gif)
