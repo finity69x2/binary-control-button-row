@@ -37,7 +37,7 @@ The values for the colors can be any valid color string in "HEX", "RGB" or by co
   ```
     cards:
       - type: entities
-        title: Hall Light Presets
+        title: Binary Buttons
         show_header_toggle: false
         entities:
         ## USE THIS CONFIG TO HAVE IT MATCH YOUR THEME ##
