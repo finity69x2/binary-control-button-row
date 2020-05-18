@@ -6,6 +6,13 @@ This plug-in was inspired by user @jazzyisj on the Home Assistant forum (communi
 
 Installation:
 
+The easiest way to install this is to use the Home Assistant Community Store (HACS) in Home Assistant.
+
+Follow the instructions there for installation making sure you note the "url:" section for the resources addition.
+
+
+Conversely, if you don't use HACS you can install it manually by performing the following:
+
 Copy the binary-control-button-row.js file to the appropriate folder in your Home Assistant Configuration directory (/config/www/).
 
 Place the following in your "resources" section in your lovelace configuration (updating the localation to where you placed the above file):
