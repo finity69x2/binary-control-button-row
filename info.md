@@ -1,5 +1,7 @@
 Changes:
 
+- v1.3 - BREAKING CHANGES! - changed the customize options to be consisdtent across all my repos and withing HA by changing first lertter in option to lowercase.
+         Also added a new "reverseButtons" to reverse the button order.
 - v1.2 - added the ability to customize the text for the buttons. defaults to "OFF, ON"
 
 Provides a means to program a Lovelace button row to control any binary entity (lights, switches, input booleans, etc) that have the state as either on or off. This will also work for fans and dimmable lights that you would only ever like to switch on & off with a single speed or brightness setting (set outside the configuration for this plugin)
