@@ -52,24 +52,23 @@ class CustomBinaryRow extends Polymer.Element {
             },
                 _config: Object,
                 _stateObj: Object,
-				_onColor: String,
-				_offColor: String,
-				_onText: String,
-				_offText: String,
-				_onName: String,
-				_offName: String,
-				_isOffState: Boolean,
-            	_isOnState: Boolean,
-				
-				_leftColor: String,
-				_leftText: String,
-				_leftName: String,
-				_leftState: Boolean,
-								
-				_rightColor: String,
-				_rightText: String,
-				_rightName: String,
-				_rightState: Boolean,
+		//_onColor: String,
+		//_offColor: String,
+		//_onText: String,
+		//_offText: String,
+		//_onName: String,
+		//_offName: String,
+		//_isOffState: Boolean,
+            	//_isOnState: Boolean,
+			
+		_leftColor: String,
+		_leftText: String,
+		_leftName: String,
+		_leftState: Boolean,
+		_rightColor: String,
+		_rightText: String,
+		_rightName: String,
+		_rightState: Boolean,
 				
         }
     }
@@ -80,9 +79,9 @@ class CustomBinaryRow extends Polymer.Element {
 	this._config = {
 		customTheme: false,
 		reverseButtons: false,
-		IsOnColor: '#43A047',
-		IsOffColor: '#f44c09',
-		ButtonInactiveColor: '#759aaa',
+		isOnColor: '#43A047',
+		isOffColor: '#f44c09',
+		buttonInactiveColor: '#759aaa',
 		customOffText: 'OFF',
 		customOnText: 'ON',
         ...config
@@ -93,94 +92,94 @@ class CustomBinaryRow extends Polymer.Element {
 
         const config = this._config;
         const stateObj = hass.states[config.entity];
-		const custTheme = config.customTheme;
-		const revButtons = config.reverseButtons;
-		const custOnClr = config.isOnColor;
-		const custOffClr = config.isOffColor;
-		const custInactiveClr = config.buttonInactiveColor;
-		const custOffTxt = config.customOffText;
-		const custOnTxt = config.customOnText;
-		
+	const custTheme = config.customTheme;
+	const revButtons = config.reverseButtons;
+	const custOnClr = config.isOnColor;
+	const custOffClr = config.isOffColor;
+	const custInactiveClr = config.buttonInactiveColor;
+	const custOffTxt = config.customOffText;
+	const custOnTxt = config.customOnText;
+	
 		
 						
 		
-		let state;
-			if (stateObj) {
-				state = stateObj.state;
-			}
-	
-		let onstate;
-		let offstate;
-	
+	let state;
 		if (stateObj) {
-			if (stateObj.state == 'on') {
-				onstate = 'on';
-			} else {
-				offstate = 'on';
-			}
+			state = stateObj.state;
 		}
 	
-		let oncolor;
-		let offcolor;
-			
-		if (custTheme) {
-			if (onstate == 'on') {
-				oncolor = 'background-color:' + custOnClr;
-			} else {
-				oncolor = 'background-color:' + custInactiveClr;
-			}
-
-			if (offstate == 'on') {
-				offcolor = 'background-color:'  + custOffClr;
-			} else {
-				offcolor = 'background-color:' + custInactiveClr;
-			}
+	let onstate;
+	let offstate;
+	
+	if (stateObj) {
+		if (stateObj.state == 'on') {
+			onstate = 'on';
 		} else {
-			if (onstate == 'on') {
-				oncolor = 'background-color: var(--primary-color)';
-			} else {
-				oncolor = 'background-color: var(--disabled-text-color)';
-			}
-	
-			if (offstate == 'on') {
-				offcolor = 'background-color: var(--primary-color)';
-			} else {
-				offcolor = 'background-color: var(--disabled-text-color)';
-			}
-		}
-	
-		let offtext = custOffTxt;
-		let ontext = custOnTxt;
-	
-		let offname = 'off';
-		let onname = 'on';
-	
-		if (revButtons) {
-			this.setProperties({
-				_stateObj: stateObj,
-				_rightState: stateObj.state === 'on',
-				_leftState: stateObj.state == 'off',
-				_rightName: onname,
-				_leftName: offname,
-				_rightColor: oncolor,
-				_leftColor: offcolor,
-				_rightText: ontext,
-				_leftText: offtext,
-			});
-		} else {
-			this.setProperties({
-				_stateObj: stateObj,
-				_leftState: stateObj.state === 'on',
-				_rightState: stateObj.state == 'off',
-				_leftName: onname,
-				_rightName: offname,
-				_leftColor: oncolor,
-				_rightColor: offcolor,
-				_leftText: ontext,
-				_rightText: offtext,
-			});
+			offstate = 'on';
 		}
 	}
+	
+	let oncolor;
+	let offcolor;
+			
+	if (custTheme) {
+		if (onstate == 'on') {
+			oncolor = 'background-color:' + custOnClr;
+		} else {
+			oncolor = 'background-color:' + custInactiveClr;
+		}
+
+		if (offstate == 'on') {
+			offcolor = 'background-color:'  + custOffClr;
+		} else {
+			offcolor = 'background-color:' + custInactiveClr;
+		}
+	} else {
+		if (onstate == 'on') {
+			oncolor = 'background-color: var(--primary-color)';
+		} else {
+			oncolor = 'background-color: var(--disabled-text-color)';
+		}
+	
+		if (offstate == 'on') {
+			offcolor = 'background-color: var(--primary-color)';
+		} else {
+			offcolor = 'background-color: var(--disabled-text-color)';
+		}
+	}
+	
+	let offtext = custOffTxt;
+	let ontext = custOnTxt;
+	
+	let offname = 'off';
+	let onname = 'on';
+	
+	if (revButtons) {
+		this.setProperties({
+			_stateObj: stateObj,
+			_rightState: stateObj.state === 'on',
+			_leftState: stateObj.state == 'off',
+			_rightName: onname,
+			_leftName: offname,
+			_rightColor: oncolor,
+			_leftColor: offcolor,
+			_rightText: ontext,
+			_leftText: offtext,
+		});
+	} else {
+		this.setProperties({
+			_stateObj: stateObj,
+			_leftState: stateObj.state === 'on',
+			_rightState: stateObj.state == 'off',
+			_leftName: onname,
+			_rightName: offname,
+			_leftColor: oncolor,
+			_rightColor: offcolor,
+			_leftText: ontext,
+			_rightText: offtext,
+		});
+	}
+    }
 
 
     stopPropagation(e) {
