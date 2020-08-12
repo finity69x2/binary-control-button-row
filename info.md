@@ -1,6 +1,6 @@
 Changes:
 
-- v1.3 - BREAKING CHANGES! - changed the customize options to be consisdtent across all my repos and withing HA by changing first lertter in option to lowercase.
+- v1.4 - BREAKING CHANGES! - changed the customize options to be consisdtent across all my repos and withing HA by changing first lertter in option to lowercase.
          Also added a new "reverseButtons" to reverse the button order.
 - v1.2 - added the ability to customize the text for the buttons. defaults to "OFF, ON"
 
