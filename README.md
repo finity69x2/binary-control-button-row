@@ -18,7 +18,7 @@ Copy the binary-control-button-row.js file to the appropriate folder in your Hom
 Place the following in your "resources" section in your lovelace configuration (updating the localation to where you placed the above file):
 
   ```
-    - url: /local/binary-control-button-preset-row.js
+    - url: /local/binary-control-button-row.js
       type: module
   ```
     
