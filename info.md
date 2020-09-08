@@ -15,7 +15,7 @@ Copy the binary-control-button-row.js file to the appropriate folder in your Hom
 Place the following in your "resources" section in your lovelace configuration (updating the localation to where you placed the above file):
 
   ```
-    - url: /local/binary-control-button-preset-row.js
+    - url: /local/binary-control-button-row.js
       type: js
   ```
     
@@ -35,7 +35,7 @@ Then to use this in a card place the following in your entity card:
 | isOnColor | String | No | '#43A047' | Sets the color of the 'Low' button if entity is on low |
 | buttonInactiveColor | String | No | '#759aaa' | Sets the color of the the buttons if that selection is not "active" |
 | customOffText | String | No | 'OFF' | Sets the text of the "off" button |
-| customLowText | String | No | 'ON' | Sets the text of the "on" button |
+| customOnText | String | No | 'ON' | Sets the text of the "on" button |
 
 The values for the colors can be any valid color string in "HEX", "RGB" or by color name.
 
