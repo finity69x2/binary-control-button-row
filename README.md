@@ -34,6 +34,8 @@ Then to use this in a card place the following in your entity card:
 | name | String | No | none | A custom name for the entity in the row |
 | customTheme | Boolean | No | false | set to true to use a custom theme |
 | reverseButtons | Boolean | No | false | set to true to use reverse the order of the buttons from default |
+| width | String | No | 30px | A custom width for the buttons |
+| height | String | No | 30px | A custom height for the buttons |
 | isOffColor | String | No | '#f44c09' | Sets the color of the 'Off' button if entity is off |
 | isOnColor | String | No | '#43A047' | Sets the color of the 'Low' button if entity is on low |
 | buttonInactiveColor | String | No | '#759aaa' | Sets the color of the the buttons if that selection is not "active" |
@@ -76,6 +78,8 @@ The values for the colors can be any valid color string in "HEX", "RGB" or by co
             entity: light.sengled_e11g13_03070a4c_1
             customOnText: yay
             customOffText: nay
+            width: '15px'
+            height: '15px'
             
   ```
 
