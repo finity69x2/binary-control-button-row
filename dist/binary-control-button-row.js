@@ -153,15 +153,15 @@ class CustomBinaryRow extends LitElement {
 			}
 		} else {
 			if (onstate == 'on') {
-				oncolor = 'background-color: var(--primary-color)';
+				oncolor = 'background-color: var(--switch-checked-color)';
 			} else {
-				oncolor = 'background-color: var(--disabled-text-color)';
+				oncolor = 'background-color: var(--switch-unchecked-color)';
 			}
 	
 			if (offstate == 'on') {
-				offcolor = 'background-color: var(--primary-color)';
+				offcolor = 'background-color: var(--switch-checked-color)';
 			} else {
-				offcolor = 'background-color: var(--disabled-text-color)';
+				offcolor = 'background-color: var(--switch-unchecked-color)';
 			}
 		}
 	
