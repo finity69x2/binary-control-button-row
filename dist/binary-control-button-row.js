@@ -152,16 +152,18 @@ class CustomBinaryRow extends LitElement {
 				offcolor = 'background-color:' + custInactiveClr;
 			}
 		} else {
+			const styleOn = 'background-color: var(--ha-switch-checked-background-color, var(--ha-color-fill-primary-normal-resting)); border-color: var(--ha-switch-checked-border-color, var(--ha-color-border-primary-loud))';
+			const styleOff = 'background-color: var(--ha-switch-background-color, var(--ha-color-fill-disabled-quiet-resting)); border-color: var(--ha-switch-border-color, var(--ha-color-border-neutral-normal))';
 			if (onstate == 'on') {
-				oncolor = 'background-color: var(--primary-color)';
+				oncolor = styleOn
 			} else {
-				oncolor = 'background-color: var(--disabled-text-color)';
+				oncolor = styleOff
 			}
 	
 			if (offstate == 'on') {
-				offcolor = 'background-color: var(--primary-color)';
+				offcolor = styleOn
 			} else {
-				offcolor = 'background-color: var(--disabled-text-color)';
+				offcolor = styleOff
 			}
 		}
 	
